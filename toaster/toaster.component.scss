@@ -1,0 +1,79 @@
+.toaster-wrapper {
+  height: 51px;
+  width: 1176px;
+  padding: 15px 10px;
+  margin: auto;
+}
+
+.toaster-text-align {
+  padding-left: 15px;
+}
+
+.success,
+.warning,
+.error {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+}
+
+.success {
+  background-color: #008a00;
+  color: #ffffff;
+  position: relative;
+  z-index: 11;
+}
+
+.warning {
+  background: #ffdc00;
+  color: #333333;
+  .close-btn {
+    color: #333333;
+  }
+}
+
+.error {
+  background: #e60014;
+  color: #ffffff;
+}
+
+.toaster-icon-text-align {
+  float: left;
+  flex-grow: 2;
+}
+
+.close-btn {
+  float: right;
+  background-color: transparent;
+  padding: 3px;
+  :focus {
+    margin: 0;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .toaster-wrapper {
+    height: 51px;
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+  }
+}
+
+// mobile
+@media (max-width: 767px) {
+  .toaster-wrapper {
+    height: 70px;
+    width: 100%;
+    padding: 15px 20px 15px 5px;
+  }
+
+  .toaster-icon-text-align {
+    float: left;
+    flex-grow: 2;
+    width: 90%;
+  }
+}

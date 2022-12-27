@@ -1,0 +1,29 @@
+<div class="bt-table">
+  <div class="bt-thead">
+    <div class="bt-tr">
+      <div
+        class="bt-th tbl-col col-{{ column.key }} col-{{ colNo + 1 }}"
+        *ngFor="let column of columnList; let colNo = index"
+      >
+        {{ column.label }}
+      </div>
+      <ng-content select="[thead]"></ng-content>
+    </div>
+  </div>
+  <div class="bt-tbody">
+    <div
+      class="bt-tr row-{{ rowNo + 1 }}"
+      *ngFor="let row of tableData; let rowNo = index"
+    >
+      <div
+        class="bt-td tbl-col col-{{ column.key }}  col-{{ colNo + 1 }} c{{
+          colNo + 1
+        }}r{{ rowNo + 1 }}"
+        *ngFor="let column of columnList; let colNo = index"
+      >
+        <span [innerHTML]="row[column.key]"></span>
+      </div>
+    </div>
+    <ng-content select="[tbody]"></ng-content>
+  </div>
+</div>

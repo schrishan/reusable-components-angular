@@ -1,0 +1,24 @@
+<div class="accordion-wrp" [ngClass]="!expand ? 'collapse' : 'expand'">
+  <div class="panel-header-wrp">
+    <span
+      class="toggle-btn"
+      (click)="openAccordionItem.emit()"
+      *ngIf="!disable"
+    ></span>
+    <div class="panel-header">
+      <ng-content select="[panel-header]"></ng-content>
+    </div>
+    <span class="close-btn" *ngIf="!disable"
+      ><i class="bt-icon bt-arrow-down"></i
+    ></span>
+  </div>
+  <div
+    class="panel-body-wrp"
+    [@slide-in-out]="expand ? 'slide-in' : 'slide-out'"
+  >
+    <div class="panel-body">
+      <ng-content select="[panel-body]"></ng-content>
+    </div>
+  </div>
+  <div></div>
+</div>

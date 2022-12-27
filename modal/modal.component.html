@@ -1,0 +1,13 @@
+<div *ngIf="visible" role="dialog" id="myModal" class="bt-modal-wrp">
+  <div role="dialog" class="bt-modal" style="display: block;">
+    <span role="dialog" class="modal-overlay"></span>
+    <div role="contentinfo" class="modal-container">
+      <div role="heading" aria-level="1" class="modal-header">
+        <ng-content select="bt-modal-header"></ng-content>
+        <span (click)="clicked.emit($event)" aria-label="button" role="button" class="modal-close-btn"><i
+            class="ma-icon ma-close"></i></span>
+      </div>
+      <ng-content select="bt-modal-body"></ng-content>
+    </div>
+  </div>
+</div>

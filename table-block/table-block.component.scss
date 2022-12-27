@@ -1,0 +1,37 @@
+.bt-table {
+  display: block;
+  width: 100%;
+  .bt-thead {
+    background-color: #5514b4;
+    color: #fff;
+    font-family: 'BTBold';
+    .bt-tr {
+      padding: 14px 15px 8px;
+    }
+    .bt-th {
+      display: inline-block;
+    }
+    .tbl-col {
+      vertical-align: top;
+    }
+  }
+  .tbl-col {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .bt-tbody {
+    border: 1px solid #ddd;
+    .bt-tr {
+      padding: 18px 13px 18px 13px;
+      border-bottom: 1px solid #ddd;
+      background-color: #ffffff;
+      // &:nth-child(odd) {
+      //   background-color: rgba(#f0f0f0, 0.5);
+      // }
+      &:hover {
+        background-color: rgba(#5514b4, 0.05);
+      }
+    }
+  }
+}

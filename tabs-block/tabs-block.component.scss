@@ -1,0 +1,128 @@
+.tab-header-wrp {
+  height: 49px;
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: #ddd;
+  border-top: 2px solid #ddd;
+  cursor: pointer;
+  position: relative;
+  .tab-header {
+    font-family: 'BTRegular';
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  &.bt-active {
+    background-color: #fff;
+    border-top: 3px solid #5514b4;
+    cursor: default;
+    .tab-header {
+      font-size: 22px;
+      font-family: 'BTLight';
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.dropdown-toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .nav-tabs {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: grid;
+    position: relative;
+    height: 43px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .tab-header-wrp {
+      height: 41px;
+      min-width: 100%;
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+      margin-right: 0;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      cursor: pointer;
+      position: relative;
+      box-sizing: border-box;
+      padding: 9px 11px;
+      order: 2;
+      margin-bottom: -1px;
+      .tab-header {
+        position: relative;
+        font-size: 16px;
+        font-family: 'BTRegular';
+      }
+      &.bt-active {
+        border-radius: 4px;
+        cursor: pointer;
+        order: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .tab-header {
+          position: relative;
+          font-size: 16px;
+          font-family: 'BTRegular';
+        }
+      }
+    }
+    .dropdown-toggle {
+      display: block;
+      height: 41px;
+      width: 100%;
+      border: 1px solid #666;
+      position: absolute;
+      z-index: 1;
+      border-radius: 4px;
+      cursor: pointer;
+      &:after {
+        content: '';
+        width: 1px;
+        display: block;
+        height: 31px;
+        background-color: #ddd;
+        position: absolute;
+        right: 40px;
+        top: 5px;
+      }
+      i {
+        position: absolute;
+        right: 11px;
+        color: #5514b4;
+        font-size: 25px;
+        display: block;
+        top: 10px;
+        z-index: 2;
+        transform: rotate(0deg);
+        z-index: 2;
+      }
+    }
+    &.toggleOn {
+      overflow: visible;
+      border-radius: 4px;
+      .dropdown-toggle {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .tab-header-pane {
+      margin-top: 40px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+  }
+}

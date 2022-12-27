@@ -1,0 +1,20 @@
+.backto-btn-wrp {
+  padding: 23px 0 28px;
+  .bt-icon {
+    transform: rotate(180deg);
+    display: inline-block;
+    top: 4px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .backto-btn-wrp {
+    padding: 13px 0 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .backto-btn-wrp {
+    padding: 10px 0 15px;
+  }
+}

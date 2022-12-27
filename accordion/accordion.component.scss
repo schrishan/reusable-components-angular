@@ -1,0 +1,46 @@
+@import '../../../../styles/base/colors';
+.bt-accordion {
+  margin: 10px 0 0;
+
+  .accordion-arrow {
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: all 0.75s ease-in-out;
+  }
+
+  .bt-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.75s ease-in-out;
+  }
+
+  .bt-accordion-title {
+    display: block;
+    width: 100%;
+  }
+
+  .accordion-hidden-cbx {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked ~ .bt-accordion-content {
+      max-height: 100vh;
+    }
+
+    &:checked + .bt-accordion-title {
+      .accordion-arrow {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &.divider {
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 20px;
+  }
+  i {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,13 @@
+<div role="checkbox" class="bt-checkbox">
+  <input
+    [attr.id]="id"
+    role="checkbox"
+    [attr.data-automation-id]="'bt-checkbox' + id"
+    (change)="clicked.emit({ select: $any($event.target).checked, id: id })"
+    type="checkbox"
+    [checked]="select"
+  />
+  <label [attr.for]="id">
+    <span role="label" class="check-box-label" [innerHtml]="label"></span></label
+  >
+</div>

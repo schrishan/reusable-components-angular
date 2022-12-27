@@ -1,0 +1,14 @@
+.bt-toggle-btn {
+  &.btn {
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #333333;
+    // width: 100%;
+    display: inline-block;
+    //min-width: 50px;
+  }
+  &.bt-active {
+    background-color: #eee7f7;
+    border: 1px solid #eee7f7;
+  }
+}

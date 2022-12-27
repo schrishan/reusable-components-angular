@@ -1,0 +1,22 @@
+<div class="nav-tooltip-wrap" *ngIf="loadNavServicesTooltip">
+    <span class="nav-tooltip-overlay"></span>
+    <div class="nav-tooltip">
+        <div class="nav-tooltip-header">
+            <span class="new-feature-txt">NEW FEATURE</span>
+            <span class="nav-tooltip-title-txt">Services</span>
+            <span class="nav-tooltip-sub-title-txt">
+                <b>See all your services in one place.</b>
+            </span>
+        </div>
+
+        <div class="nav-tooltip-body">
+            <div class="bt-p1">
+                Check your contract information and access your services with ease. Just use the navigation or the Manage your account link,
+                it’s now as simple as that. </div>
+            <div class="btns-wrap">
+                <bt-secondary-button [omclick]='{"m" :"Continue to Dashboard", "i":"126"}' (click)="loadDashboard()">Continue to dashboard</bt-secondary-button>
+                <bt-primary-button [omclick]='{"m" :"View Services", "i":"126"}' class="primary-button" (click)="loadServices()">View services</bt-primary-button>
+            </div>
+        </div>
+    </div>
+</div>

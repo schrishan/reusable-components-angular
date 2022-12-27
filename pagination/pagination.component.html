@@ -1,0 +1,32 @@
+<div *ngIf="pages.length > 0" class="bt-pagination" role="pagination">
+  <div role="text" class="total-records">
+    Displaying {{ start }}-{{ end }} of
+    {{ _config.totalRecordsCount }}
+  </div>
+  <div role="none" class="pagination-bar">
+    <div role="none" class="pagination">
+      <a
+        role="button"
+        [class.disabled]="isFirstPage"
+        (click)="selectPage((currentPage || 1) - 1)"
+        class="prev"
+        ><i class="bt-icon bt-arrow-left black"></i
+      ></a>
+      <a
+        role="button"
+        class="pg-btn"
+        *ngFor="let page of visiblePages"
+        [class.bt-active]="page === currentPage"
+        (click)="selectPage(page)"
+        >{{ page.toString() }}</a
+      >
+      <a
+        role="button"
+        [class.disabled]="isLastPage"
+        class="next"
+        (click)="selectPage((currentPage || 0) + 1)"
+        ><i class="bt-icon bt-arrow-right black"></i
+      ></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import '../../../../styles/base/colors';
+@media (min-width: 767px) {
+  .link-btn {
+    .btn-txt {
+      display: inline-block;
+      position: relative;
+    }
+
+    &:hover {
+      color: $primary-color;
+
+      .btn-txt {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.link-btn-wrp {
+  .link-arrow {
+    padding-left: 11px;
+
+    i {
+      font-size: 16px;
+      top: 3px;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+}

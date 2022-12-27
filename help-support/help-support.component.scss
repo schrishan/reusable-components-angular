@@ -1,0 +1,290 @@
+.help-support-card {
+  .help-support-faq-block{
+  width: 100%;
+  background-color: #ffffff;
+  padding:25px 25px 30px;
+}
+  .card-title-wrp {
+    padding: 4px 0 15px;
+    border-bottom: 1px solid #eee;
+    .card-title {
+      font-size: 36px;
+      font-family: 'BTLight';
+    }
+  }
+
+  .help-links-wrp {
+    margin-top: 0;
+    display: flex;
+    .col {
+      width: 46%;
+      display: inline-block;
+      border-left: 2px solid #5514b4;
+      padding-left: 9px;
+      vertical-align: top;
+      margin-right: 0;
+      flex-grow: 1;
+      &.col-right {
+        width: 46%;
+        margin-left: 44px;
+      }
+      .help-lnk {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .help-lnk {
+      display: block;
+      i {
+        font-size: 27px;
+        vertical-align: middle;
+        color: #5514b4;
+      }
+      vertical-align: middle;
+      margin-bottom: 12px;
+      a {
+        color: #5514b4;
+        vertical-align: middle;
+        .lnk-txt {
+          vertical-align: middle;
+          padding: 5px 0 5px 7px;
+          display: inline-block;
+          width: calc(100% - 90px);
+        }
+        &:hover {
+          .lnk-txt {
+            text-decoration: underline;
+          }
+        }
+        .icon-wrp {
+          display: inline-block;
+          width: 56px;
+          text-align: right;
+          i {
+            margin-right: -12px;
+            color: #5514b4;
+            line-height: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  .action-btns-block {
+    margin-top: 38px;
+    border-top: 1px solid#EEEEEE;
+    padding-top: 26px;
+    .col {
+      width: 50%;
+      display: inline-block;
+      margin-right: 0;
+      &.col-left {
+        width: 47%;
+      }
+      &.col-right {
+        margin-left: 68px;
+        width: 46%;
+        vertical-align: top;
+      }
+    }
+    .col-intro {
+      font-size: 18px;
+      font-family: 'BTLight';
+      margin-bottom: 23px;
+    }
+     bt-link-button {
+      display: inline-block;
+      margin-right: 12px;
+  }
+  }
+  .title-icon-wrp {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: -5px;
+    i {
+      font-size: 40px;
+      line-height: 0;
+    }
+  }
+}
+
+@media (max-width: 1175px) and (min-width: 1024px) {
+  .help-support-card {
+    .help-links-wrp {
+      .col.col-right {
+        width: 46%;
+        margin-left: 35px;
+      }
+    }
+    .action-btns-block {
+      .col.col-right {
+        margin-left: 60px;
+        width: 46%;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .help-support-card {
+    .help-links-wrp {
+      .col {
+        width: 100%;
+        &.col-right {
+          width: 100%;
+          margin-left: 30px;
+          margin-top: 0;
+          .help-lnk {
+          }
+        }
+      }
+      .help-lnk {
+        a {
+          i {
+            font-size: 23px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .help-support-card {
+    .action-btns-block {
+      .col {
+        width: 100%;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        &.col-left {
+          width: 45%;
+        }
+        &.col-right {
+          margin-left: 67px;
+          width: 45%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .help-support-wrp {
+    padding: 0;
+    margin: 0px 0 85px;
+  }
+  .help-support-card {
+    .card-title-wrp {
+      padding: 4px 0 10px;
+      border-bottom: none;
+      .card-title {
+        font-size: 22px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 5px;
+      }
+    }
+    .title-icon-wrp {
+      float: none;
+      margin-top: 15px;
+      margin-right: 0;
+      font-size: 22px;
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      a {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    .help-links-wrp {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 14px 13px;
+      .help-lnk {
+        a {
+          color: #5514b4;
+          vertical-align: top;
+          width: calc(100% - 33px);
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.25;
+          .lnk-txt {
+            vertical-align: middle;
+            padding: 5px 10px 5px 7px;
+            display: inline-block;
+            width: calc(100% - 9px);
+            font-size: 14px;
+          }
+          .icon-wrp {
+            width: auto;
+            i {
+              display: inline-block;
+              float: none;
+              margin-right: -12px;
+              font-size: 20px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .col {
+        width: 100%;
+        &.col-right {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 0;
+          .help-lnk {
+            &:first-child {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .action-btns-block {
+      border-top: 1px solid #eeeeee;
+      margin: 10px 16px;
+      padding-bottom: 15px;
+      padding-top: 20px;
+      display: grid;
+      .col {
+        &.col-left {
+          width: 100%;
+        }
+        &.col-right {
+          margin-left: 0;
+          width: 100%;
+          margin-top: 10px;
+          border-top: 1px solid #eee;
+          border-bottom: none;
+          padding: 23px 0 0;
+        }
+      }
+      .col-intro {
+        order: 0;
+        margin-bottom: 20px;
+    }
+    bt-link-button {
+      margin: 20px 0 0;
+      order: 3;
+  }
+    }
+    .help-links-wrp {
+        display: block;
+    }
+    .help-support-faq-block{
+      padding: 0;
+    }
+  }
+  .download-app-btn {
+    display: block;
+    button {
+      width: 100%;
+    }
+  }
+}

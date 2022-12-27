@@ -1,0 +1,57 @@
+<div class="help-support-card">
+  <div class="card-title-wrp">
+    <span class="card-title">Having issues? Try our Help and support.</span>
+  </div>
+  <div class="help-support-faq-block">
+  <div class="help-links-wrp">
+    <div class="col col-left">
+      <span
+        class="help-lnk"
+        *ngFor="let link of helpLinks | slice: 0:helpLinks.length / 2"
+        [omclick]="{ m: 'Having issues:' + link.label, i: omniId }"
+      >
+        <i class="ma-icon ma-{{ link.icon }}"></i>
+        <a href="{{ link.link }}" target="_blank">
+          <span class="lnk-txt">{{ link.label }}</span>
+          <span class="icon-wrp">
+            <i class="bt-icon bt-arrow-right black"></i
+          ></span>
+        </a>
+      </span>
+    </div>
+    <div class="col col-right">
+      <span
+        class="help-lnk"
+        *ngFor="let link of helpLinks | slice: helpLinks.length / 2"
+        [omclick]="{ m: 'Having issues:' + link.label, i: omniId }"
+      >
+        <i class="ma-icon ma-{{ link.icon }}"></i>
+        <a href="{{ link.link }}" target="_blank">
+          <span class="lnk-txt">{{ link.label }}</span>
+          <span class="icon-wrp">
+            <i class="bt-icon bt-arrow-right black"></i>
+          </span>
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <div class="action-btns-block">
+      <div class="col-intro"
+        >Get a helping hand across all areas of your business, from billing to broadband.</div
+      >
+      <bt-link-button
+        [omclick]="{ m: 'Having issues:Help and support', i: omniId }"
+        (clicked)="openUrl('https://btbusiness.custhelp.com/app/home/')"
+        >Help and support</bt-link-button
+      >
+        <a
+          href="https://btbusiness.custhelp.com/app/home/#chat"
+          target="_blank"
+          class="btn primary-btn"
+          [omclick]="{ m: 'Having issues:Chat now', i: omniId }"
+          >Chat now</a
+        >
+    </div>
+</div>
+</div>

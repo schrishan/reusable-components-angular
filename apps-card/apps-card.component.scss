@@ -1,0 +1,144 @@
+.apps-card {
+  width: 372px;
+  background-color: #fff;
+  padding: 22px 25px 25px;
+  min-height: 203px;
+  margin: 8px 10px;
+  display: inline-block;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 7%);
+  .apps-card-section-header {
+    .card-title {
+      font-size: 26px;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: 'BTLight';
+      margin-left: 20px;
+    }
+    .card-icon-wrp {
+      display: inline-block;
+      vertical-align: middle;
+      i {
+        font-size: 50px;
+        color: #5514b4;
+        &.ma-eeLogo {
+          font-size: 40px;
+          &:before {
+            content: '';
+            color: #fce43f;
+            background-color: #009c9c;
+            padding: 6px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  .apps-card-card-body {
+    margin: 12px 0 15px 0px;
+  }
+  .none-desktop {
+    display: none;
+  }
+  bt-link-button {
+    &.no-app-links {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1156px) and (min-width: 1024px) {
+  .apps-card {
+    .apps-card-section-header {
+      .card-title {
+      }
+      .card-icon-wrp {
+        i {
+        }
+      }
+    }
+
+    .none-desktop {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .apps-card {
+    width: 349px;
+    min-height: 218px;
+    vertical-align: top;
+    .apps-card-section-header {
+      .card-title {
+        width: calc(100% - 80px);
+      }
+      .card-icon-wrp {
+        i {
+        }
+      }
+    }
+    .none-desktop {
+      display: block;
+      .app-link-btn {
+        display: inline-block;
+        margin: 3px 0 0;
+        &:last-child {
+          margin-left: 43px;
+        }
+        img {
+          width: 120px;
+          height: 40px;
+          &.google-btn-img {
+            width: 135px;
+          }
+        }
+      }
+    }
+    bt-link-button {
+      display: none;
+      &.no-app-links {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .apps-card {
+    width: 100%;
+    padding: 18px 20px 20px;
+    margin: 8px 0 12px;
+    .apps-card-section-header {
+      .card-title {
+        margin-left: 20px;
+        width: calc(100% - 80px);
+        line-height: 1.25;
+      }
+      .card-icon-wrp {
+        i {
+        }
+      }
+    }
+    .none-desktop {
+      display: block;
+      text-align: center;
+      a.app-link-btn {
+        display: block;
+      }
+      img {
+        &.app-btn-img {
+          margin: 2px auto 13px;
+        }
+        &.google-btn-img {
+          width: 135px;
+        }
+      }
+    }
+    bt-link-button {
+      display: none;
+      &.no-app-links {
+        display: block;
+      }
+    }
+  }
+}

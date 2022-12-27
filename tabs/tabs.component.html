@@ -1,0 +1,9 @@
+<div class="tabs-list">
+  <span
+    *ngFor="let tab of tabList; let i = index"
+    class="tab{{ i + 1 }} tab-btn"
+    [ngClass]="activeTab === 'tab' + (i + 1) ? 'bt-active' : ''"
+    (click)="selectTab('tab' + (i + 1))"
+    >{{ tab }}</span
+  >
+</div>

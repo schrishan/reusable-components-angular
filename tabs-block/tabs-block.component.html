@@ -1,0 +1,16 @@
+<div class="nav-tabs" [ngClass]="toggleOn ? 'toggleOn' : ''">
+  <span class="dropdown-toggle" (click)="openDropdown()">
+    <i class="bt-icon bt-arrow-down"></i>
+  </span>
+  <div class="tab-header-pane" *ngIf="tabs.length > 1">
+    <div
+      class="tab-header-wrp {{ tab.customClass }}"
+      *ngFor="let tab of tabs"
+      (click)="selectTab(tab)"
+      [class.bt-active]="tab.active"
+    >
+      <span class="tab-header" [innerHTML]="tab.title"></span>
+    </div>
+  </div>
+</div>
+<ng-content></ng-content>

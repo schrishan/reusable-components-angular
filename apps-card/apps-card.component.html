@@ -1,0 +1,49 @@
+<div class="apps-card">
+  <div role="heading" class="apps-card-section-header">
+    <span class="card-icon-wrp"><i class="ma-icon ma-{{dataObj.type}}"></i></span>
+    <span class="card-title">{{dataObj.title}}</span>
+  </div>
+  <div class="apps-card-card-body">
+    <span class="bt-p">{{dataObj.intro}}</span>
+  </div>
+  <div class="apps-card-btn-wrp">
+    <bt-link-button class="desktop-only"
+     (click)="goToLink(dataObj.webLink)"
+     [omclick]="{
+      m: dataObj.omniLinkLabel+ ':' +dataObj.webLinkLabel,
+      i: '109'
+    }">{{dataObj.webLinkLabel}}</bt-link-button>
+    <div class="none-desktop">
+      <a *ngIf="dataObj.appStoreLink"
+        href="{{dataObj.appStoreLink}}"
+        target="_blank"
+        class="app-link-btn"
+        [omclick]="{ m: dataObj.omniLinkLabel + ':App store', i: dataObj.omniId }"
+      >
+        <img
+          class="app-btn-img"
+          src="{{ imgUrl }}banners/apple-btn.png"
+          alt="App store button"
+        />
+      </a>
+      <a *ngIf="dataObj.googlePlayLink"
+        href="{{dataObj.googlePlayLink}}"
+        target="_blank"
+        class="app-link-btn"
+        [omclick]="{ m: dataObj.omniLinkLabel + ':Google play', i: dataObj.omniId }"
+      >
+        <img
+          class="google-btn-img"
+          src="{{ imgUrl }}banners/google-btn.png"
+          alt="Play store button"
+        />
+      </a>
+    </div>
+    <bt-link-button *ngIf="!dataObj.appStoreLink && !dataObj.appStoreLink" class="no-app-links"
+     (click)="goToLink(dataObj.webLink)"
+     [omclick]="{
+      m: dataObj.omniLinkLabel+ ':More about:' +dataObj.title,
+      i: '109'
+    }">{{dataObj.webLinkLabel}}</bt-link-button>
+  </div>
+</div>

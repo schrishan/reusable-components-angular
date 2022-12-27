@@ -1,0 +1,107 @@
+.breadcrumb {
+  background: none;
+  font-size: 0.8em;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  max-width: 1176px;
+  margin: 0 auto;
+  &__section {
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+
+  a,
+  .breadcrumb-item {
+    color: #5514b4;
+    cursor: pointer;
+  }
+  a:hover,
+  .breadcrumb-item:hover {
+    color: #5514b4;
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  li:last-child,
+  .active {
+    color: #333333 !important;
+    font-weight: bold;
+    background: none !important;
+    cursor: default;
+  }
+  li::after {
+    content: '>';
+    color: #5514b4;
+    margin: 0 5px 0 15px;
+    font-weight: bold;
+    cursor: default;
+  }
+  li:last-child::after {
+    content: '';
+  }
+}
+
+@media (max-width: 1175px) and (min-width: 1024px) {
+  .breadcrumb {
+    margin-bottom: 0px;
+    max-width: 990px;
+    &__section {
+      padding: 0 15px;
+    }
+  }
+}
+
+// ipad / tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .breadcrumb {
+    margin-bottom: 0px;
+    max-width: 744px;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    &__section {
+      margin: 15px 0 0 10px;
+    }
+
+    a,
+    .breadcrumb-item {
+      color: #5514b4;
+      cursor: pointer;
+    }
+    a:hover,
+    .breadcrumb-item:hover {
+      color: #5514b4;
+      text-decoration: none;
+    }
+    li {
+      list-style: none;
+      float: left;
+      margin: 5px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    li:last-child,
+    .inactive {
+      color: #5514b4 !important;
+      background: none !important;
+    }
+    .inactive::before {
+      content: '<';
+      color: #5514b4;
+    }
+    .align-back-text {
+      margin-left: 15px;
+    }
+  }
+}

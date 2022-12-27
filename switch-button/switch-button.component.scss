@@ -1,0 +1,31 @@
+.btn.btn-swicher {
+    min-width: 50px;
+    height: 26px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #666666;
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+          transition: all 0.35s ease-in-out;
+    &:after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      display: block;
+      border-radius: 100%;
+      position: absolute;
+      left: 6px;
+      top: 6px;
+       transition: all 0.35s ease-in-out;
+    }
+    &.on{
+       background-color: #008A00;
+        &:after {
+        left: 30px;
+        top: 6px;
+      }
+    }
+}

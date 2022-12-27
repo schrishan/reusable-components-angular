@@ -1,0 +1,12 @@
+<div role="combobox" class="bt-select-box" [ngClass]="enableSelected ? 'show-selected' : ''" [btToggleClass]="'bt-active'">
+  <div role="heading" class="selected-option">
+    {{ options | selected: select:label }}
+  </div>
+  <i class="bt-icon bt-arrow-down"></i>
+  <div role="list" class="select-option-list">
+    <div (click)="selectOption(option)" role="option" class="option" [ngClass]="[option[select] ? 'selected' : '']"
+      *ngFor="let option of options">
+      {{ option[label]}}
+    </div>
+  </div>
+</div>

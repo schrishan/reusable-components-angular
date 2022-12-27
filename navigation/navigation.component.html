@@ -1,0 +1,28 @@
+<div class="my-account-nav-bar-wrp" data-automation-id="navigation-wrapper" aria-label="Navigation" role="navigation">
+  <div class="main-nav-wrp" data-automation-id="main-navigation" aria-label="Main Navigation" >
+    <div class="container main-nav pos-r" >
+      <ng-content></ng-content>
+      <div data-automation-id="navigation-active-item" class="active-nav-item-caption" role="text"
+        [ngClass]="[showMobile ? 'bt-active' : '']" (click)="toggleMenu($event)">
+        {{ activeItemTitle }}
+        <i class="bt-arrow-down bt-icon black"></i>
+      </div>
+      <div [class.bt-active]="showMobile" class="main-nav-items-wrp" >
+        <ul data-automation-id="main-navigation-items" class="main-nav-items">
+          <li [attr.data-automation-id]="'navigation-item-' + item.title" [attr.aria-label]="item.title"
+            *ngFor="let item of items" class="nav-item nav-itm-{{ item.icon }}" [ngClass]="[item.title == activeItemTitle? 'bt-active' : '']"
+            (click)="clicked.emit(item)"
+            [omclick]='{"m" :"Nav:"+item.title, "i":omniId}'>
+            <a *ngIf="!item.routerLink" [attr.href]="item.url">
+              <i *ngIf="item.icon" class="mobile-only nav-item-icon ma-icon" [ngClass]="['ma-' + item.icon]"></i>
+              {{ item.title }}</a>
+            <a *ngIf="item.routerLink" [routerLink]="item.url">
+              <i *ngIf="item.icon" class="mobile-only nav-item-icon ma-icon" [ngClass]="['ma-' + item.icon]"></i>
+              {{ item.title }}</a>
+          </li>
+        </ul>
+        <nav-tooltip-modal></nav-tooltip-modal>
+      </div>
+    </div>
+  </div>
+</div>

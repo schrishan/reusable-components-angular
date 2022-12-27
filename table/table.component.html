@@ -1,0 +1,17 @@
+<div role="table" class="price-table">
+  <div role="columnheader" class="tr-header">
+    <div class="td-col" role="heading" *ngFor="let header of headers">
+      <span role="heading" class="upper-content">{{ header }}</span>
+      <span role="heading" class="bottom-content"></span>
+    </div>
+  </div>
+
+  <div role="table" aria-label="Table body" class="table-body">
+    <div class="tr-row" role="row" *ngFor="let row of rows">
+      <div class="td-col" role="cell" *ngFor="let colum of row">
+        <span class="upper-content" role="cell">{{ colum }}</span>
+        <span class="bottom-content" role="cell"></span>
+      </div>
+    </div>
+  </div>
+</div>

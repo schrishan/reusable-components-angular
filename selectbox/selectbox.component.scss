@@ -1,0 +1,78 @@
+.bt-select-box {
+  height: 41px;
+  position: relative;
+  // width: 125px;
+}
+.bt-select-box i {
+  position: absolute;
+  right: 11px;
+  color: #5514b4;
+  font-size: 25px;
+  display: block;
+  top: 10px;
+  z-index: 2;
+  transform: rotate(0deg);
+  z-index: 2;
+}
+.bt-select-box .selected-option {
+  height: 41px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 9px 11px;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.bt-select-box .selected-option:after {
+  content: '';
+  width: 1px;
+  display: block;
+  height: 31px;
+  background-color: #ddd;
+  position: absolute;
+  right: 40px;
+  top: 5px;
+}
+.bt-select-box .select-option-list {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 41px;
+  left: 0;
+  display: none;
+}
+.bt-select-box .select-option-list .option {
+  padding: 9px 11px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  cursor: pointer;
+}
+.bt-select-box .select-option-list .option.selected {
+  background-color: #eee;
+  display: none;
+}
+
+.bt-select-box .select-option-list .option:last-child {
+  border-bottom: none;
+}
+.bt-select-box.bt-active i {
+  transform: rotate(180deg);
+}
+.bt-select-box.bt-active .select-option-list {
+  display: block;
+  position: absolute;
+  top: auto;
+  left: auto;
+  max-height: 259px;
+  overflow-y: auto;
+  z-index: 6;
+}
+
+.bt-select-box.show-selected .select-option-list .option.selected {
+  background-color: #f2f2f2;
+  display: block;
+  cursor: default;
+}

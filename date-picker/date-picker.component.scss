@@ -1,0 +1,19 @@
+::ng-deep .cdk-overlay-container {
+  z-index: 1200 !important;
+}
+.datepicker-input-wrp {
+  display: inline-block;
+  position: relative;
+  .datepicker-ph {
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    padding: 8px 0 0 8px;
+    bottom: 0;
+    height: 40px;
+    display: block;
+    background-color: #fff;
+    width: calc(100% - 35px);
+    height: calc(100% - 5px);
+  }
+}

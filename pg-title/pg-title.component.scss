@@ -1,0 +1,49 @@
+@import '../../../../styles/base/variables';
+@import '../../../../styles/base/colors';
+
+.pg-header {
+  padding: 0 10px;
+  .pg-title {
+    color: $primary-font-color;
+    font-size: 48px;
+    font-family: $btLight;
+    font-weight: 100;
+    margin: 0 0 0;
+  }
+  .pg-descriptrion {
+    color: $secondary-font-color;
+    margin: 2px 0 0;
+    width: 60%;
+    a {
+      text-decoration: underline;
+      color: $primary-color;
+    }
+  }
+}
+
+.btBold {
+  font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pg-header {
+    .pg-title {
+      font-size: 40px;
+    }
+    .pg-descriptrion {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pg-header {
+    padding: 0;
+    .pg-title {
+      font-size: 32px;
+    }
+    .pg-descriptrion {
+      margin: 5px 0 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.nav-tooltip-overlay {
+  position: fixed;
+  display: block;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.nav-tooltip {
+  width: 450px;
+  min-height: 150px;
+  position: absolute;
+  left: 18px;
+  top: 19px;
+  background-color: #5514b4;
+  border-radius: 5px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid #5514b4;
+  }
+  bt-primary-button {
+    float : right;
+  }
+}
+.nav-tooltip-header {
+  padding: 26px 20px 20px 20px;
+}
+.nav-tooltip-body {
+  background-color: #ffffff;
+  color: #424242;
+  padding: 15px 20px 20px 20px;
+}
+
+.bt-p2 {
+  margin-top: 15px;
+}
+
+.btns-wrap {
+  margin-top: 17px;
+}
+
+.nav-tooltip-wrap {
+  position: absolute;
+  z-index: 999;
+  left: 248px;
+  top: 100%;
+}
+
+.new-feature-txt {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px 11px;
+  font-size: 13px;
+  line-height: 0;
+  display: inline-block;
+}
+.nav-tooltip-title-txt {
+  display: block;
+  font-size: 32px;
+  color: #fff;
+  font-family: 'BTLight';
+  padding: 15px 0 18px 0;
+}
+.nav-tooltip-sub-title-txt {
+  display: block;
+  color: #ff80ff;
+  font-size: 22px;
+  font-family: 'BTBold';
+}
+
+@media (max-width: 767px) {
+  .nav-tooltip {
+    width: 290px;
+    position: fixed;
+    left: 18px;
+    top: 115px;
+
+    .btns-wrap .btn {
+      width: 100%;
+    }
+    bt-primary-button {
+      margin-left: 0;
+      margin-top: 10px;
+      display: block;
+    }
+  }
+  .nav-tooltip-header {
+    padding: 22px 20px 20px 15px;
+  }
+
+  .nav-tooltip-title-txt {
+    padding: 15px 0 18px 0;
+  }
+
+  .nav-tooltip-sub-title-txt {
+    font-size: 19px;
+  }
+  .nav-tooltip-body {
+    padding: 15px 15px 20px 15px;
+  }
+  .nav-tooltip bt-primary-button {
+    float: none;
+  }
+}

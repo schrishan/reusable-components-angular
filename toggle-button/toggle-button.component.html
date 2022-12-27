@@ -1,0 +1,7 @@
+<button
+  class="bt-toggle-btn btn"
+  [ngClass]="isSelected ? 'bt-active' : ''"
+  (click)="toggleSelect()"
+>
+  <ng-content></ng-content>
+</button>

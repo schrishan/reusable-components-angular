@@ -1,0 +1,11 @@
+<div class="removable-buttons-list">
+  <span
+    *ngFor="let button of buttonsList; let i = index"
+    [@fadeAnimation]="'in'"
+    (click)="removeItem(i)"
+    class="removable-btn"
+  >
+    <span class="btn-label">{{ button }}</span
+    ><span class="btn-icon"><i class="bt-icon bt-new black"></i></span>
+  </span>
+</div>

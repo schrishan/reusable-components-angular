@@ -1,0 +1,26 @@
+<div
+  [attr.data-automation-id]="'accordion' + id"
+  role="separator"
+  class="bt-accordion"
+  [ngClass]="[divider ? 'divider' : '']"
+>
+  <input
+    role="checkbox"
+    class="accordion-hidden-cbx"
+    type="checkbox"
+    [attr.name]="id"
+    [attr.id]="id"
+    checked
+  />
+  <label [attr.for]="id" class="bt-accordion-title">
+    <div aria-level="1" role="heading" class="filter-sec-title">
+      <span
+        ><i class="bt-icon bt-arrow-up black accordion-arrow"></i
+        >{{ heading }}</span
+      >
+    </div>
+  </label>
+  <div class="filter-sec-content bt-accordion-content">
+    <ng-content></ng-content>
+  </div>
+</div>

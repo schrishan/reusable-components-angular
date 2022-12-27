@@ -1,0 +1,26 @@
+<div class="calendar-custom-header">
+  <span mat-icon-button (click)="previousClicked('month')">
+    <i class="bt-icon bt-arrow-left black"></i>
+  </span>
+  <span class="calendar-custom-header-label">{{ periodLabel }}</span>
+  <span mat-icon-button (click)="nextClicked('month')">
+    <i class="bt-icon bt-arrow-right black"></i>
+  </span>
+</div>
+<span
+  id="calendar-custom-header-title"
+  role="label"
+  class="bt-label bt-datepicker-label mobile-only"
+  >{{ title }}</span
+>
+<span (click)="done()" class="datepicker-close-btn mobile-only">
+  <i class="ma-icon ma-close-white"></i>
+</span>
+<button
+  id="date-picker-done"
+  data-done="false"
+  (click)="done()"
+  class="btn primary-btn date-picker-btn mobile-only"
+>
+  Done
+</button>

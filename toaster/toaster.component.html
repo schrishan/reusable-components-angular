@@ -1,0 +1,18 @@
+<section *ngIf="toasterDetails.text" [ngClass]="toasterDetails.type">
+  <section class="toaster-wrapper">
+    <span class="toaster-icon-text-align">
+      <i
+        class="label-icon mb-icon align-icon mb-font-size-vsm"
+        [ngClass]="getIcon(toasterDetails)"
+      ></i>
+      <span class="toaster-text-align">{{ toasterDetails.text }}</span>
+    </span>
+    <button
+      *ngIf="toasterDetails.isCloseBtn"
+      class="close-btn"
+      (click)="close(toasterDetails)"
+    >
+      <i class="ma-icon ma-close"></i>
+    </button>
+  </section>
+</section>

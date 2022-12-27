@@ -1,0 +1,12 @@
+@media (min-width: 767px) {
+  .bt-card {
+    &.primary {
+      &:hover {
+        border-color: #3d0989;
+      }
+    }
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}

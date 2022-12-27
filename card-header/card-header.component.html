@@ -1,0 +1,8 @@
+<div class="card-header pos-r" role="heading">
+  <span class="card-title" role="heading" aria-label="Heading Text">{{
+    heading
+  }}</span>
+  <span (click)="clicked.emit($event)" class="card-icon-wrp" role="none">
+    <i *ngIf="icon" class="ma-icon" [ngClass]="['ma-' + icon]"></i>
+  </span>
+</div>

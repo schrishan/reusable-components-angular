@@ -1,0 +1,13 @@
+<div
+  class="tooltip-holder"
+  [ngClass]="{ 'disabled-position': disabledPosition }"
+>
+  <div class="tooltip-wrp">
+    <span *ngIf="!disabledPosition" class="tooltip-close-icon" (click)="close()"
+      ><i class="ma-icon ma-close-white"></i
+    ></span>
+    <div class="tooltip-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

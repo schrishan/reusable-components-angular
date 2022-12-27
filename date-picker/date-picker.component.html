@@ -1,0 +1,21 @@
+<input
+  [attr.data-automation-id]="id"
+  class="bt-input-text"
+  [value]="value"
+  matInput
+  [min]="min"
+  [max]="max"
+  [matDatepicker]="picker"
+  [matDatepickerFilter]="matDatepickerFilter"
+  (click)="open()"
+  (dateChange)="dateChanged($event)"
+  [placeholder]="placeholder"
+  readonly
+/>
+<mat-datepicker-toggle matSuffix [for]="picker"> </mat-datepicker-toggle>
+<mat-datepicker
+  [calendarHeaderComponent]="header"
+  (closed)="close()"
+  (opened)="open()"
+  #picker
+></mat-datepicker>

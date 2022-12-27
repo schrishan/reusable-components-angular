@@ -1,0 +1,10 @@
+
+<label class="radio-button-wrp" (change)="clicked.emit({ select: $any($event.target).checked, name: name, value:value, label:label })">
+  <input
+  type="radio"
+  [value]="value"
+  [attr.name]="name"
+  [attr.data-automation-id]="'bt-radioButton' + name"
+  type="radio" [checked]="select"/>
+  <span class="checkmark"></span><span class="radio-btn-label" [innerHtml]="label"></span>
+</label>

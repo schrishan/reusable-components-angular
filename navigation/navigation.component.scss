@@ -1,0 +1,156 @@
+@import '../../../../styles/base/colors';
+
+.main-nav-wrp {
+  border-bottom: 1px solid $border-color-3;
+
+  .main-nav {
+    padding: 0 10px;
+  }
+
+  ul {
+    padding: 17px 0 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-item {
+    display: inline-block;
+    padding-right: 25px;
+
+    a {
+      padding: 21px 0 19px;
+      color: $nav-color;
+      position: relative;
+    }
+
+    &.bt-active {
+      background-color: transparent;
+
+      a {
+        border-bottom: 2px solid $primary-color;
+        color: $primary-color;
+        font-weight: bold;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.active-nav-item-caption {
+  display: none;
+}
+.manage-broadband {
+  .main-nav-wrp {
+    .nav-item.nav-itm-home {
+      a {
+        border-bottom: 2px solid $primary-color;
+        color: $primary-color;
+        font-weight: bold;
+        cursor: default;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .main-nav-wrp {
+    ul {
+      background-color: $secondary-color;
+      width: 100%;
+      position: relative;
+      padding: 0;
+      z-index: 7;
+
+      .nav-item {
+        &.bt-active {
+          display: none;
+        }
+
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid $border-color-3;
+        margin: 0;
+        min-height: 48px;
+
+        &:first-child {
+          border: none;
+        }
+
+        a {
+          padding: 10px 15px 7px;
+          width: 100%;
+          display: inline-block;
+          i {
+            &.ma-ABN {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+    }
+
+    .main-nav {
+      padding: 0;
+    }
+
+    .active-nav-item-caption {
+      font-weight: 600;
+      padding: 13px 15px;
+      min-height: 48px;
+      position: relative;
+      display: block;
+      margin: 0;
+      border-bottom: 1px solid $border-color-3;
+      color: #5514b4;
+      width: 100%;
+      z-index: 2;
+      background-color: $secondary-color;
+
+      &.bt-active {
+        z-index: 6;
+      }
+
+      i {
+        font-size: 35px;
+        position: absolute;
+        right: 8px;
+        top: 7px;
+        color: $primary-color;
+        transition: all 0.6s ease-in-out;
+      }
+
+      &.bt-active {
+        max-height: 500px;
+
+        i {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .nav-item-icon {
+      display: inline-block;
+      width: 20px;
+      vertical-align: middle;
+      margin: 0 15px 0 0;
+      font-size: 20px;
+
+      &.ma-home {
+        font-size: 25px;
+        margin-left: -2px;
+      }
+    }
+  }
+}
+@media (min-width: 767px) {
+  .nav-item {
+    a {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
